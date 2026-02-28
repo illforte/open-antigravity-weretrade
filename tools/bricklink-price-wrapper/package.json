@@ -1,0 +1,19 @@
+{
+  "name": "bricklink-price-wrapper",
+  "version": "1.0.0",
+  "description": "A lightweight, modern Node.js wrapper for fetching BrickLink catalog and price data.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo "Error: no test specified" && exit 1"
+  },
+  "keywords": [
+    "bricklink",
+    "lego",
+    "api",
+    "wrapper",
+    "ecommerce",
+    "pricing"
+  ],
+  "author": "weretrade IT UG",
+  "license": "MIT"
+}

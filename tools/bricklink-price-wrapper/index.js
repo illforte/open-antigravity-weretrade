@@ -45,13 +45,15 @@ class BrickLinkClient {
    */
   async getPriceGuide(itemType, itemNo, options = {}) {
     return new Promise((resolve, reject) => {
-      // Mocking the request structure for this public demo wrapper
+      // Log with standard metadata for Loki/Grafana ingestion
       console.info(JSON.stringify({ 
+        timestamp: new Date().toISOString(),
         level: 'info', 
         msg: 'Fetching pricing...', 
         itemType, 
         itemNo,
-        service: 'bricklink-wrapper'
+        service: 'bricklink-price-wrapper',
+        env: process.env.NODE_ENV || 'production'
       }));
       
       // Real implementation would execute an HTTPS request to:

@@ -46,7 +46,13 @@ class BrickLinkClient {
   async getPriceGuide(itemType, itemNo, options = {}) {
     return new Promise((resolve, reject) => {
       // Mocking the request structure for this public demo wrapper
-      console.log(`[BrickLink Wrapper] Fetching pricing for ${itemType} ${itemNo}...`);
+      console.info(JSON.stringify({ 
+        level: 'info', 
+        msg: 'Fetching pricing...', 
+        itemType, 
+        itemNo,
+        service: 'bricklink-wrapper'
+      }));
       
       // Real implementation would execute an HTTPS request to:
       // https://api.bricklink.com/api/store/v1/items/${itemType}/${itemNo}/price
